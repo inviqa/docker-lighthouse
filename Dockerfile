@@ -3,7 +3,8 @@ FROM yukinying/chrome-headless-browser:latest
 
 USER root
 
-RUN apt-get update -qq \
+RUN sed -i 's/stable/buster/g' /etc/apt/sources.list \
+ && apt-get update -qq \
  && apt-get --no-install-recommends -qq install -y \
    bc \
    curl \
@@ -22,7 +23,8 @@ RUN cd /home/headless \
  && rm /tmp/nvm-install.sh \
  && . /home/headless/.nvm/nvm.sh \
  && nvm install v15 \
- && npm install -g lighthouse
+ && npm install -g lighthouse \
+ && npm cache clean --force
 
 COPY root  /
 
