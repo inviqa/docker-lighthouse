@@ -2,7 +2,7 @@ version: '3'
 
 services:
   lighthouse:
-    image: quay.io/inviqa_images/lighthouse
+    image: quay.io/inviqa_images/lighthouse:latest${TAG_SUFFIX:-}
     build: .
     environment:
       TARGET_URL:
