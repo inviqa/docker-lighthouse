@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  lighthouse:
-    image: quay.io/inviqa_images/lighthouse
-    build: .
-    environment:
-      TARGET_URL:
