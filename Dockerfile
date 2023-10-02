@@ -28,7 +28,7 @@ RUN bash <<EOF
   bash /tmp/nvm-install.sh
   rm /tmp/nvm-install.sh
   . /home/headless/.nvm/nvm.sh
-  nvm install v15
+  nvm install v20
   npm install -g lighthouse
   npm cache clean --force
   lighthouse --version
