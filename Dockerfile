@@ -31,6 +31,7 @@ RUN bash <<EOF
   nvm install v15
   npm install -g lighthouse
   npm cache clean --force
+  lighthouse --version
 EOF
 
 COPY root  /
